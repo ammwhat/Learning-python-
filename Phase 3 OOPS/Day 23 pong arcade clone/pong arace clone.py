@@ -129,7 +129,8 @@ else:
     screen.onkeypress(r_paddle.down, "Down")
     screen.onkeypress(l_paddle.up, "w")
     screen.onkeypress(l_paddle.down, "s")
-
+screen.listen()    
+     
 def ai_move():
     if l_paddle.ycor() < ball.ycor() and l_paddle.ycor() < 250:
         l_paddle.goto(l_paddle.xcor(), l_paddle.ycor() + 15)
