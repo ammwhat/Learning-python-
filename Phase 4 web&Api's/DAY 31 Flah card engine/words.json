@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 [{"French": "partie", "English": "part"}, {"French": "Bonjour", "English": "HELLO"}, {"French": "oui", "English": "yes"}, {"French": "non", "English": "NO"}, {"French": "Silvous plait", "English": "please"}, {"French": "Au reviour", "English": "goodbye"}, {"French": "Bi envenue", "English": "welcome"}]
+=======
+[{"French" : "partie" , "English" : "part"}, {"French": "Bonjour", "English": "HELLO"}, {"French": "merci", "English": "thankyou"}, {"French": "oui", "English": "yes"},
+{"French": "non", "English": "NO"}, {"French": "Silvous plait", "English": "please"}, {"French": "Au reviour", "English": "goodbye"},
+{"French": "Bi envenue", "English": "welcome"}]
+>>>>>>> fa6f75bf92e1771001293c3b5f0b7bdd2326a50d
