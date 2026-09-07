@@ -6,8 +6,12 @@ import random
 import smtplib
 
 today = datetime.date.today()
-MY_EMAIL = "akj172001@gmail.com"
-APP_PASSWORD = "wveevcssneesnrpw"
+from dotenv import load_dotenv
+
+load_dotenv()  
+
+MY_EMAIL = os.getenv("MY_EMAIL")
+APP_PASSWORD = os.getenv("APP_PASSWORD")
 
 current_month = today.month
 current_day = today.day
