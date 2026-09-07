@@ -25,12 +25,14 @@ def next_card():
     global current_card, timer
     if timer is not None:
         window.after_cancel(timer)
+        timer = None
     current_card = random.choice(data)
     flashcard.itemconfig(card_word, text = current_card["French"])
     timer = window.after(3000, flip)
-
+      
 def flip():
-    flashcard.itemconfig(card_word, text = current_card["English"])       
+    if current_card:
+        flashcard.itemconfig(card_word, text = current_card["English"])
 
 def right():
     data.remove(current_card)
