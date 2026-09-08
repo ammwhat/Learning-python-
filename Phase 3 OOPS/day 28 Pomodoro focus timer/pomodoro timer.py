@@ -1,5 +1,6 @@
 import tkinter as tk
-from PIL import Image, ImageTk
+from pathlib import Path
+
 
 window = tk.Tk()
 window.title("pomodoro timer")
@@ -8,8 +9,9 @@ label.pack()
 canvas = tk.Canvas(window, height=600, width=600)
 canvas.pack()
 
-image = Image.open("han_sohee.jpg")
-image = ImageTk.PhotoImage(image)
+base_folder = Path(__file__).resolve().parent
+image_path = base_folder / "han_sohee.png"
+image = tk.PhotoImage(file=str(image_path))
 canvas.create_image(300, 300, image=image)
 timer_text = canvas.create_text(300,300, text= "25:00", font = ("Arial", 30, "bold"), fill = "white")
 
