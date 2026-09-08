@@ -36,7 +36,7 @@ def is_night():
   if time_now >= sunset_hour or time_now <= sunrise_hour:
     return True
   return False
- 
+  
 while True:
   try:
     response = requests.get(url= iss_endpoint)
