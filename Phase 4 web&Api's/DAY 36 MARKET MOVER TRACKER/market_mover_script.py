@@ -57,7 +57,7 @@ if percentage_diff > 0.05 or percentage_diff < -0.05:
     client = Client(account_sid, auth_token)
     message = client.messages.create(
         body = message_body,
-        from_= f"whatsapp:{twilio_number}",
+        from_= "whatsapp:+17372212163",
         to = f"whatsapp:{my_number}"
                 
     )
