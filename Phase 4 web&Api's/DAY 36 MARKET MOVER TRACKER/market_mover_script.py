@@ -42,7 +42,7 @@ day_before_yesterday = date_list[1]
 
 yesterday_closingprice = float(data[yesterday]["4. close"])
 day_before_yesterday_closingprice = float(data[day_before_yesterday]["4. close"])
-diff = (day_before_yesterday_closingprice - yesterday_closingprice) 
+diff = (yesterday_closingprice - day_before_yesterday_closingprice) 
 percentage_diff = (diff / day_before_yesterday_closingprice) * 100
 
 if percentage_diff > 0.05 or percentage_diff < -0.05:
