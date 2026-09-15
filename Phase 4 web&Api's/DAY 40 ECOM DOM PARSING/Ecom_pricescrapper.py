@@ -4,6 +4,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 import smtplib
+import time
 
 MY_EMAIL = os.getenv("MY_EMAIL")
 MY_PASSWORD = os.getenv("MY_PASSWORD")
@@ -20,7 +21,7 @@ def product_details():
 
 user_product_link, user_budget = product_details()
 
-def check_price(user_product_link , user_budget):
+def check_price():
     response = requests.get(url= user_product_link, headers= my_headers)
     response.raise_for_status()
     soup = BeautifulSoup(response.text, "html.parser")
@@ -43,7 +44,14 @@ def send_alert(url, price):
                 to_addrs= MY_EMAIL,
                 msg= f"Subject : PRICE DROP ALERT\n\n Your product {url}, is within ur budget with {price} "
             )
-            print("Email successfully dispatched!")    
+            print("Email successfully dispatched!")   
+if __name__ = "__main__":
+    while True:
+        check_price()
+        time.sleep(21600)
+        
+        
+        
         
             
     
