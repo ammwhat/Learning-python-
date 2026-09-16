@@ -37,6 +37,10 @@ for card in flight_cards:
             msg= f"Subject : pack ur bags\n\n your foriegn trip from DEL TO {my_dest} IS POSSIBLE "
         )
         print("Email successfully dispatched!")    
+
+
+    
+            
     
 
     
