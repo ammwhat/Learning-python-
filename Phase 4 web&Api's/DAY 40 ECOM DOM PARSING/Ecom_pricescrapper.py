@@ -12,10 +12,18 @@ MY_PASSWORD = os.getenv("MY_PASSWORD")
 
 my_headers = {
     "User-Agent" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",
+<<<<<<< HEAD
     "Accept-language" : "en-US,en;q=0.9",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
     "Connection": "keep-alive",
     "Upgrade-Insecure-Requests": "1"
+=======
+    "Accept-language" : "en-US,en;q=0.9"
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+    "Connection": "keep-alive",
+    "Upgrade-Insecure-Requests": "1"
+
+>>>>>>> 408bac0a013f811ee7a66978aac0b45b8cb37e6a
 }
 def product_details():
     product_link = str(input("Paste the url of your desried product : "))
@@ -47,6 +55,7 @@ def send_alert(url, price):
                 to_addrs= MY_EMAIL,
                 msg= f"Subject : PRICE DROP ALERT\n\n Your product {url}, is within ur budget with {price} "
             )
+<<<<<<< HEAD
             print("Email successfully dispatched!")    
 
 if __name__ == "__main__" :
@@ -54,6 +63,16 @@ if __name__ == "__main__" :
         check_price()
         time.sleep(21600)
                 
+=======
+            print("Email successfully dispatched!")   
+if __name__ = "__main__":
+    while True:
+        check_price()
+        time.sleep(21600)
+        
+        
+        
+>>>>>>> 408bac0a013f811ee7a66978aac0b45b8cb37e6a
         
             
     
